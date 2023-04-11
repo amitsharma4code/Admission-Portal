@@ -50,7 +50,7 @@ app.use(cookieParser())
 //routes
 
 //FrontController Routes
-app.get('/addmisstion_protal',FrontController.addprotal)
+app.get('/',FrontController.addprotal)
 app.get('/register',FrontController.register)
 app.post('/studinsert',FrontController.studinsert)
 app.get('/contact',admin_auth,FrontController.contact)
