@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <title>Patliputra-Admission-Portal</title>
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <div class="background">
+    <div class="loginpage">
+      <div class="img">
+        <img src="img.jpg">
+      </div>
+      <div class="login">
+        <div>
+          <img src="logo.jpg" alt="college logo">
+        </div>
+        <span style="margin-bottom: 10px;">
+          <h1>Register Here</h1>
+          <h1>
+            <%=message%>
+          </h1>
+        </span>
+        <form method="post" action="/studinsert" enctype="multipart/form-data">
+
+          <div class="form-group">
+            <input type="text" required name="name" class="form-control" placeholder="Name">
+          </div>
+          <div class="form-group">
+            <input type="text" required name="email" class="form-control" placeholder="E-Mail">
+          </div>
+          <div class="form-group">
+            <input type="password" required name="password" class="form-control" placeholder="Password">
+          </div>
+          <div class="form-group">
+            <input type="password" required name="cpassword" class="form-control" placeholder="Conform_Password">
+          </div>
+          
+            <div class="required" style="font-weight: bold;"> Upload Image</div> <br>
+            
+              <span><input type="file" name="stud_img" required></span>
+            
+            <div class="form-group" style="align-items: center;">
+              <button style="align-items: center; text-align: center; margin-top: 15px;"
+                class="btn btn-success">Submit</button>
+            </div>
+          </form>
+            <div style="margin-left:5px">
+             <span class="text">Have An Account?</span>
+                <span class="text mr-auto"><a class="link" href="/login">Login NOW</a>
+                </span>
+              </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+</body>
+
+</html>

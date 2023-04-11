@@ -1,0 +1,116 @@
+<%-include('../header.ejs')%>
+
+    <section class="min-vw-100">
+        <section id="registration">
+            <div class="container">
+                <h1 class="text-center pt-5">B.Tech Form View</h1>
+                <h1 class="text-center text-uppercase pb-2"
+                    style="color:#ed5a25;">Edit Form!</h1>
+                <p class="text-center" style="color: #fff; background-color:
+                    #35b9dd;">In Case any query, Kindly
+                    Contact: +915555555555</p>
+                <div class="row "
+                    style="display:flex;align-items:center;justify-content:center">
+                    <!-- Slider Div end -->
+                    <div class="col-lg-6">
+                            <div class="mb-3 mt-1">
+                                <label class="mb-2">Username:</label>
+                                <input type="text" name="name" value="<%=cdata.name%>"
+                                class="form-control enter_name"
+                                placeholder="Enter name" style="border:1px solid
+                                #35b9dd">
+                            </div>
+                            <div class="mb-3">
+                                <label class="mb-2">Email:</label>
+                                <input type="email" name="email" value="<%=cdata.email%>"
+                                class="form-control"
+                                placeholder="Enter Email" style="border-radius:
+                                25px; border:1px solid #35b9dd">
+                            </div>
+                            <div class="mb-3">
+                                <label class="mb-2">Mobile No.</label>
+                                <input type="number" name="number"
+                                    class="form-control" value="<%=cdata.number%>"
+                                style="border-radius: 25px; border:1px solid
+                                #35b9dd">
+                            </div>
+                            <div class="mb-3">
+                                <label class="mb-2">D.O.B:</label>
+                                <input type="date" name="dob"
+                                    class="form-control" value="<%=cdata.dob%>"
+                                style="border-radius: 25px; border:1px solid
+                                #35b9dd;">
+                            </div>
+                            <div class="mb-3 ">
+                                <label class="mb-2">Gender</label>
+                                <br>
+                                <input type="radio" name="gender" value="male"
+                                <%=cdata.gender=="male" ? 'checked' : " "
+                                    %>>&nbsp;Male
+                                <input type="radio" name="gender" value="female"
+                                <%=cdata.gender=="female" ? 'checked'
+                                    : " " %> >&nbsp;Female
+
+                            </div>
+                            <div class="mb-3">
+                                <label>Address:</label>
+                                <textarea class="form-control" name="address"
+                                    style="border-radius: 25px; border:1px solid
+                                    #35b9dd"><%=cdata.address%></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label>Select College</label>
+                                    <select name="college" class="form-control"
+                                        style="border-radius: 25px; border:1px
+                                        solid #35b9dd">
+                                        <option <%=cdata.college=="MITS" ?
+                                            'selected' : " " %>>MITS</option>
+                                        <option <%=cdata.college=="RJIT" ?
+                                            'selected' : " " %>>RJIT</option>
+                                        <option <%=cdata.college=="ITM" ?
+                                            'selected' : " " %>>ITM</option>
+                                        <option <%=cdata.college=="NITM" ?
+                                            'selected' : " " %> >NITM</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label>Course</label>
+                                    <select name="course" class="form-control"
+                                        style="border-radius: 25px; border:1px
+                                        solid #35b9dd">
+                                        <option>Select</option>
+                                        <option <%=cdata.course=="B.Tech" ?
+                                            'selected' : " " %>>B.Tech</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label>Branch</label>
+                                    <select name="branch" class="form-control"
+                                        style="border-radius: 25px; border:1px
+                                        solid #35b9dd">
+                                        <option>Select</option>
+                                        <option <%=cdata.branch=="CSE" ?
+                                            'selected' : " " %> >CSE</option>
+                                        <option <%=cdata.branch=="IT" ?
+                                            'selected' : " " %> >IT</option>
+                                        <option <%=cdata.branch=="EC" ?
+                                            'selected' : " " %> >EC</option>
+                                        <option <%=cdata.branch=="ET" ?
+                                            'selected' : " " %> >ET</option>
+                                        <option <%=cdata.branch=="ME" ?
+                                            'selected' : " " %> >ME</option>
+                                        <option <%=cdata.branch=="EE" ?
+                                            'selected' : " " %>>EE</option>
+                                    </select>
+                                </div>
+                                <div class="text-center btn-info" style="margin: 25px;"> 
+                                    <a href="/btechformdisplay" style=" color: black;text-decoration: none; padding: 5px;">OK! All Done</a>
+                                </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <%-include('../footer.ejs')%>

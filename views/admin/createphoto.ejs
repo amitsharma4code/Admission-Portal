@@ -1,0 +1,568 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patliputra-Addmission_Dashboard</title>
+  <link href="css/style.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-G
+    n5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css ">
+  <style>
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 30px;
+    }
+
+    .bg-blue {
+      background-color: black;
+    }
+
+    .navbar-brand img {
+      height: 40px;
+      width: 40px;
+      border-radius: 5px;
+    }
+
+    .navbar-dark .navbar-nav .nav-link {
+      color: white;
+    }
+
+    .navbar-dark .navbar-nav .active .nav-link {
+      color: #fff;
+    }
+
+    .banner img {
+      width: 100%;
+    }
+
+    .blog-box {
+      text-align: center;
+      margin-bottom: 20px;
+
+    }
+
+    .blog-box h3 {
+      margin: 20px 0;
+      font-size: 22px;
+      color: #000;
+    }
+
+    .blog-box p {
+      color: #666;
+    }
+
+    .blog-box span,
+    .posted-on span {
+      font-style: italic;
+      color: #000;
+    }
+
+    .blog-box img {
+      width: 100%;
+      box-shadow: 2px 3px rgb(207, 204, 204);
+    }
+
+    .mtb-40 {
+      margin: 40px 0;
+      min-height: 558px;
+    }
+
+    .banner-box {
+      position: relative;
+    }
+
+    .intro-text {
+      width: 100%;
+      position: absolute;
+      top: 30%;
+      text-align: center;
+      color: #fff;
+    }
+
+    .intro-text-box {
+      width: 62%;
+      margin: auto;
+      background-color: rgba(96, 96, 96, 0.6);
+      padding: 20px;
+      border: 10px solid #808080;
+    }
+
+    .intro-text-box h1 {
+      font-size: 3em;
+    }
+
+    .blog-right h3 {
+      background-color: #000;
+      color: #fff;
+      padding: 5px 15px;
+      font-size: 20px;
+    }
+
+    .detail-img {
+      margin: 40px 0px;
+    }
+
+    .rb-box-img {
+      margin-right: 15px;
+    }
+
+    .rb-box-img img {
+      width: 100px;
+    }
+
+    .rb-box {
+      display: flex;
+    }
+
+    .rb-box-desc h4 {
+      font-size: 20px;
+      color: #000;
+      font-weight: 600;
+    }
+
+    .rb-box-desc p {
+      color: #666;
+    }
+
+    .rb-box {
+      margin-bottom: 10px;
+    }
+
+    .recent-post a:hover {
+      text-decoration: none;
+    }
+
+    .recent-post a:hover h4 {
+      color: #007EDB;
+    }
+
+    .categories {
+      margin-top: 20px;
+    }
+
+    .categories ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .categories ul li {
+      border-bottom: 1px dotted #ccc;
+      padding: 5px 0px;
+    }
+
+    .categories ul li a {
+      color: #333;
+      display: block;
+    }
+
+    .categories ul li a:hover {
+      color: #007EDB;
+      text-decoration: none;
+    }
+
+    .body-content {
+      min-height: 380px;
+    }
+
+    .error-404 {
+      text-align: center;
+    }
+
+    .error-404 h1 {
+      font-size: 10em;
+    }
+
+    .service-error {
+      text-align: center;
+      padding: 50px 0;
+    }
+
+    .service-error h1 {
+      font-size: 3em;
+      text-transform: uppercase;
+      color: #007EDA;
+    }
+
+    /*Admin*/
+    .login-box {
+      box-shadow: 1px 1px 7px #666;
+      padding: 20px;
+      margin-top: 10%;
+    }
+
+    .login-box h1 {
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 20px
+    }
+
+    .dash-left ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .dash-left ul li {
+      background-color: #f1f1f1;
+      margin-bottom: 5px;
+    }
+
+    .dash-left ul li a {
+      color: #333;
+      padding: 5px 15px;
+      display: block;
+    }
+
+    .dash-left ul li:hover a {
+      background-color: #007EDB;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .dash-left ul li a.active {
+      background-color: #007EDB;
+      color: #fff;
+    }
+
+    .dash-header {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .table img {
+      width: 80px;
+    }
+
+    .action a {
+      margin: 0 5px;
+    }
+
+    footer {
+      background-color: #000;
+      color: #fff;
+      padding: 20px;
+    }
+
+    /*validation*/
+    .ng-valid[required],
+    .ng-valid.required {
+      border: 1px solid #42A948;
+    }
+
+    .error {
+      color: #ff0000;
+    }
+
+    .success {
+      color: green;
+    }
+
+    .contact-message {
+      text-align: center;
+    }
+
+    @media (max-width: 767px) {
+      .intro-text {
+        display: none;
+      }
+    }
+
+    /*self style*/
+
+    .container4model {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .mcontainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+    }
+
+    .textmodel {
+      color: #007EDA;
+      margin: 5px 0px 5px 0px;
+
+    }
+
+    .contact-bcimg {
+      padding: 150px;
+      background-image: url('../image/background.jpg');
+      height: 92vh;
+
+    }
+
+    .form_design {
+      margin: auto;
+      width: 500px;
+      box-shadow: 1px 1px 7px #666;
+      padding: 20px;
+
+    }
+
+    .pswpage {
+      height: 100vh;
+      background-color: red;
+    }
+  </style>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #007EDA;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="<%=img.url%>" height="50px" class="pic"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/dashboard">Home</a>
+          </li>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Profile
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="/admin/updatepassword">Update Password</a></li>
+              <li><a class="dropdown-item" href="/admin/updatephoto">Update Photo</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout">Logout</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+
+  <section class="dashboard-wrap mtb-40 " style="padding: 40px;">
+    <div class="container">
+      <div class="body-content">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="dash-left">
+              <ul>
+                <li class="active"><a href="/admin/dashboard" >Dashboard</a></li>
+                <li><a href="/admin/displaydata">Display All Students Data</a></li>
+                <li><a href="/admin/displaycontact">Contact</a></li>
+                <li><a href="/admin/updatepassword">Update Password</a></li>
+                <li><a href="/admin/updatepassword" class="active">Update Photo</a></li>
+
+
+                <li><a href="/logout">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-9">
+            <div class="dash-right">
+              
+                <div class="col-md-6 offset-md-3">
+                    <span class="anchor" id="formChangePassword"></span>
+                    <!-- form card change password -->
+                    <div class="card card-outline-secondary">
+                        <div class="card-header">
+                            <h3 class="mb-0">Change Profile Photo</h3>
+                        </div>
+                        <div class="card-body">
+                            <span style="margin-bottom: 10px;">
+                                <% if(message.length> 0){ %>
+                                    <div class="alert alert-success">
+                                        <%= message %>
+                                    </div>
+                                    <%}%>
+                                    <% if(message1.length> 0){ %>
+                                        <div class="alert alert-danger">
+                                            <%= message1 %>
+                                        </div>
+                                        <%}%>
+               
+                            </span>
+                            <form  action="/admin/editphoto" class="form" role="form" autocomplete="off" method="post" enctype="multipart/form-data">
+                                <div class="form-group">
+                                    <label for="inputPasswordOld">Charge Photo</label>
+                                    <input type="file" class="form-control" id="inputPasswordOld" name="image" required="">
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-success btn-lg float-right">Save</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- /form card change password -->
+
+                </div>
+                <div class="col-md-6 offset-md-3">
+                    <span class="anchor" id="formResetPassword"></span>
+                    <hr class="mb-5">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-lg-start bg-light text-muted">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+      <!-- Left -->
+      <div class="me-5 d-none d-lg-block">
+        <span>Get connected with us on social networks:</span>
+      </div>
+      <!-- Left -->
+
+      <!-- Right -->
+      <div>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-gem me-3"></i>Company name
+            </h6>
+            <p>
+              Here you can use rows and columns to organize your footer content. Lorem ipsum
+              dolor sit amet, consectetur adipisicing elit.
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Products
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Angular</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">React</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Vue</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Laravel</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Useful links
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Pricing</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Settings</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Orders</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Help</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+            <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+            <p>
+              <i class="fas fa-envelope me-3"></i>
+              info@example.com
+            </p>
+            <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+            <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <section class="copyright-bar" style="background-color:#0088bd">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="copyright-col text-center">
+              <p>Copyrights 2018 © Patliputra University, Patna. All Rights Reserved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/30ac3f577b.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
