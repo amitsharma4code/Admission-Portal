@@ -10,7 +10,8 @@ var cloudinary = require('cloudinary');
 var flash = require('connect-flash');
 var session=require('express-session')
 const fileUpload=require('express-fileupload');
-
+const dotenv=require('dotenv')
+dotenv.config({path:'.env'})
 const app = express()
 const port = 3000;
 
