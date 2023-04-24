@@ -138,15 +138,15 @@ class FrontController {
             }
           } else {
             req.flash("error", "password is not matched");
-            res.redirect("/addmisstion_protal");
+            res.redirect("/");
           }
         } else {
           req.flash("error", "You are not registred user ! Please Register");
-          res.redirect("/addmisstion_protal");
+          res.redirect("/");
         }
       } else {
         req.flash("error", "All Fields Are Required");
-        res.redirect("/addmisstion_protal");
+        res.redirect("/");
       }
     } catch (error) {
       console.log(error);

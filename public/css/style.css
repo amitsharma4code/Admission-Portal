@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+	box-sizing: border-box;
 }
 .background{
     width: 100%;
@@ -18,12 +19,10 @@
     background-color: rgb(246, 245, 242);
     display: flex;
     border-radius: 25px;
-    
 }
-
 .img{
     width: 50%;
-    
+   
 }
 .img img{
     width: 100%;
@@ -62,6 +61,13 @@
     margin: 15px 0px;
 
 }
+.nav-sticky{
+	height: 90px;
+	position: sticky !important;
+	width: 100%;
+	z-index: 2;
+	top: 0.1px;
+  }
 .button{
     display: inline-block;
     outline: none;
@@ -95,10 +101,7 @@
     color: black;
     font-weight: bold;
 }
-navbar{
-    background-color: black;
-    color: white;
-}
+
 .ftc {
     margin-bottom: 4px;
     padding-bottom: 4px;
@@ -109,7 +112,6 @@ navbar{
     color: #C4EEFF;
     margin-bottom: 25px;
 }
-
 
 /* dashboard design */
 
@@ -128,7 +130,7 @@ h1 {
 	border-radius: 5px;
 }
 
-.navbar-dark .navbar-nav .nav-link {
+.navbar-dark .navbar-nav .nav-link { 
 	color: white;
 }
 
@@ -365,11 +367,6 @@ footer {
 	text-align: center;
 }
 
-@media (max-width: 767px) {
-	.intro-text {
-		display: none;
-	}
-}
 
 /*self style*/
 
@@ -409,4 +406,77 @@ footer {
 	height: 100vh;
 	background-color: red;
   }
+  .collapse.show {
+	display: block !important;
+	background-color: #f7f7f7 !important;
+	text-align: center !important;
+  }
 
+/* resonsive */
+@media screen and (max-width:1024px) {
+	.d-flex {
+		display: flex !important;
+		gap: 10px;
+	  }
+  
+}
+@media screen and (max-width:767px) {
+	/* navbar */
+	.navbar .navbar-brand{
+		margin-left: 20px;
+	}
+
+	.intro-text {
+		display: none;
+	}
+
+	.collapse.show {
+		display: block;
+		background-color: #ece7e7;
+		text-align: center;
+		
+	  }
+	  .collapse.show {
+		display: block;
+		background-color: #f7f7f7;
+		text-align: center;
+	  }
+	  .navbar-toggler:not(:disabled):not(.disabled) {
+		margin-right: 15px;
+	  }
+	  .background{
+		height: 90vh;
+	  }
+	  .loginpage{
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		top: 0%;
+		border: none !important;
+		border-radius: 0px;
+	  }
+	  .loginpage .img{
+		width: 90%;
+        height: 100%;
+        margin-block: 28px;
+	  }
+	  .loginpage .login{
+		width: 90%;
+	  }
+	  .login img {
+		width: 50px;
+		height: 40px;
+	  }
+	  /* dashboard */
+	  .d-flex{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		
+	  }
+	  .d-flex .card{
+		width: 100% !important;
+	  }
+}
