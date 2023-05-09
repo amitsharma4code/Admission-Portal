@@ -1,8 +1,10 @@
 <%-include('../header.ejs')%>
-    <div class="dash-title" style="margin:95px 50px 50px 50px;">
-        <h1 class="text-center py-4" style="background-color:#11a8f4; color: #100101;">MBA FORM DISPLAY</h1>
+<div class="container my-5 ">
+    <div class="dash-title my-5" >
+        <h1 class="text-center py-5 bg-info">B.TECH FORM DISPLAY</h1>
     </div>
-    <table class="table table-bordered table-striped">
+    <div class="table-responsive my-lg-5">
+    <table class="table align-middle">
         <tbody>
             <tr style="background-color: #35b9dd; color: #fff;" class="trb thead text-center">
                 <th>S. No.</th>
@@ -14,10 +16,7 @@
                 <th>Comment</th>
                 <th>Action</th>
             </tr>
-
-
             <tr class="text-center trb table" style="text-transform:uppercase;">
-                
                 <td>1</td>
                 <td><%=cdata.name%></td>
                 <td><%=cdata.college%></td>
@@ -26,23 +25,21 @@
                 <td>pending</td>
                 <td>Wait</td>
                 <td>
-                    <a href="/mbaformview" class="btn btn-danger btn-sm action-btn"><i
+                    <a href="/btechformview" class="btn btn-danger btn-sm action-btn"><i
                             class="fa-solid fa-eye"></i></a>
-                    <a href="/mbaformedit" class="btn btn-info btn-sm action-btn"><i
+                    <a href="/btechformedit" class="btn btn-info btn-sm action-btn"><i
                             class="fa-regular fa-pen-to-square"></i></a>
-
                 </td>
             </tr>
-            
-
-
-
         </tbody>
     </table>
+    </div>
     <div class="my-4 text-center">
         <a href="/dashboard"
             style="background-color: yellow; padding: 10px;color: #0a0202;text-decoration: none;">Back To The Dashboard</a>
     </div>
+
+</div>
 
 
 <%-include('../footer.ejs')%>

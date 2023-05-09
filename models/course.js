@@ -15,7 +15,7 @@ const CourseSchema=new mongoose.Schema({
         require:true
     },
     dob:{
-        type:Date,
+        type:String,
         require:true
     },
     gender:{

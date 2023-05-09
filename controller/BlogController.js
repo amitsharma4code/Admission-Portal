@@ -57,9 +57,10 @@ class BlogController {
   static btechformdisplay = async (req, res) => {
     try {
       const { name, image, _id } = req.user;
-      console.log(_id)
+     
+      // console.log(_id)
       const coursedata = await CourseModel.findOne({ user_id:_id,course:"B.Tech"});
-       console.log("course data",coursedata);
+      //  console.log("course data",coursedata);
       res.render("courses/btech/btechformdisplay", {n: name,img: image,cdata: coursedata,
       });
     } catch (error) {
@@ -214,7 +215,7 @@ class BlogController {
     }
   };
   static bcaformupdate = async (req, res) => {
-    console.log(req.params.id)
+    // console.log(req.params.id)
     try {
       const {
         name,

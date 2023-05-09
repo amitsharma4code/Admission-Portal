@@ -19,7 +19,7 @@ class PswController {
       const { email } = req.body;
       //  console.log(email)
       const user = await UserModel.findOne({ email: email });
-      // console.log(data);
+      // console.log(user);
       if (user) {
         const randomString = randomstring.generate();
         //  console.log(randomString)
@@ -34,14 +34,14 @@ class PswController {
           service: "gmail",
           auth: {
             user: "amitsh.1405@gmail.com",
-            pass: "scsjynzbteaxfwlh",
+            pass: "bjqebuzjqjgerkky",
           },
         });
 
         var mailOptions = {
           from: "amitsh.1405@gmail.com",
-          to: "amitsharma4code@gmail.com",
-          subject: "Node js mail send",
+          to: "amitgpl028@gmail.com",
+          subject: "Password change",
           html:
             "<p>hii " +
             user.name +
@@ -71,7 +71,7 @@ class PswController {
   static reset_psw_create = async (req, res) => {
     try {
       const token = req.query.token;
-      //  console.log("token",token);
+       console.log("token",token);
       const verifytoken = await UserModel.findOne({ token: token });
       // console.log(verifytoken)
       if (verifytoken) {

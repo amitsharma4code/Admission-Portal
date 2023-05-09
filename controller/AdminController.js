@@ -48,7 +48,7 @@ class AdminController{
 
   static editpassword=async(req,res)=>{
     try {
-          console.log(req.body)
+          // console.log(req.body)
           const {password,npassword,cnpassword}=req.body;
            if(npassword == cnpassword){
               //  console.log("all field are matched")
@@ -56,15 +56,18 @@ class AdminController{
                 const user=await UserModel.findById(_id)
                 // console.log(user);
                  const ismatched = await bcrypt.compare(password, user.password);
+                //  console.log(ismatched)
                 if(ismatched){
                   const hashpassword = await bcrypt.hash(npassword, 10);
-                  console.log("hashpassword",hashpassword)
+                  // console.log("hashpassword",hashpassword)
                    const update=await UserModel.updateOne({_id:_id},{$set:{password:hashpassword}})
                   //  console.log(update);
                   req.flash("success","Password Updated Successfully")
                   res.redirect('/admin/updatepassword');
                 }else{
                   req.flash("error","You are not etering right password! please remember your password and try again")
+                  res.redirect('/admin/updatepassword');
+
                 }
                 
           }else{

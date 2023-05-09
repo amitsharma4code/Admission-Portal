@@ -1,4 +1,4 @@
-//component 
+
 const admin_auth=require('./middleware/auth')
 const BlogController=require('./controller/BlogController')
 const FrontController=require('./controller/FrontController')

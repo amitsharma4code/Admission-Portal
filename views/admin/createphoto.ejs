@@ -322,8 +322,8 @@
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #007EDA;">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img src="<%=img.url%>" height="50px" class="pic"></a>
+    <div class="container-sm">
+      <a class="navbar-brand" href="#" ><img src="<%=img.url%>" style="height: 72px; width: 72px;" ></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -357,7 +357,7 @@
   </nav>
 
 
-  <section class="dashboard-wrap mtb-40 " style="padding: 40px;">
+  <section class="dashboard-wrap mtb-40 ">
     <div class="container">
       <div class="body-content">
         <div class="row">
@@ -376,7 +376,7 @@
             </div>
           </div>
           <div class="col-md-9">
-            <div class="dash-right">
+            <div class="dash-right mt-5 ">
               
                 <div class="col-md-6 offset-md-3">
                     <span class="anchor" id="formChangePassword"></span>
@@ -385,7 +385,7 @@
                         <div class="card-header">
                             <h3 class="mb-0">Change Profile Photo</h3>
                         </div>
-                        <div class="card-body">
+                        <div class="card-body ">
                             <span style="margin-bottom: 10px;">
                                 <% if(message.length> 0){ %>
                                     <div class="alert alert-success">
@@ -399,7 +399,7 @@
                                         <%}%>
                
                             </span>
-                            <form  action="/admin/editphoto" class="form" role="form" autocomplete="off" method="post" enctype="multipart/form-data">
+                            <form  action="/admin/editphoto" class="form " role="form" autocomplete="off" method="post" enctype="multipart/form-data">
                                 <div class="form-group">
                                     <label for="inputPasswordOld">Charge Photo</label>
                                     <input type="file" class="form-control" id="inputPasswordOld" name="image" required="">
