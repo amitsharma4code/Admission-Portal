@@ -1,7 +1,7 @@
 <%-include('../header.ejs')%>
 <div class="container my-5 ">
     <div class="dash-title my-5" >
-        <h1 class="text-center py-5 bg-info">B.TECH FORM DISPLAY</h1>
+        <h1 class="text-center py-5 bg-info">MBA FORM DISPLAY</h1>
     </div>
     <div class="table-responsive my-lg-5">
     <table class="table align-middle">
@@ -22,13 +22,11 @@
                 <td><%=cdata.college%></td>
                 <td><%=cdata.course%></td>
                 <td><%=cdata.branch%></td>
-                <td>pending</td>
-                <td>Wait</td>
+                <td><%=cdata.status%></td>
+                <td><%=cdata.comment%></td>
                 <td>
-                    <a href="/btechformview" class="btn btn-danger btn-sm action-btn"><i
-                            class="fa-solid fa-eye"></i></a>
-                    <a href="/btechformedit" class="btn btn-info btn-sm action-btn"><i
-                            class="fa-regular fa-pen-to-square"></i></a>
+                    <a href="/mbaformview" class="btn btn-warning btn-sm action-btn">View</a>
+                    <a href="/mbaformedit" class="btn btn-info btn-sm action-btn">Edit</a>
                 </td>
             </tr>
         </tbody>

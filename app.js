@@ -86,7 +86,7 @@ app.post('/mbaforminsert',admin_auth,BlogController.mbaforminsert)
 app.get('/mbaformdisplay',admin_auth,BlogController.mbaformdisplay)
 app.get('/mbaformview',admin_auth,BlogController.mbaformview)
 app.get('/mbaformedit',admin_auth,BlogController.mbaformedit)
-app.post('/mbaformupdate/:id',admin_auth,BlogController.bcaformupdate)
+app.post('/mbaformupdate/:id',admin_auth,BlogController.mbaformupdate)
 
 
 
@@ -102,6 +102,8 @@ app.get('/admin/updatepassword',admin_auth,AdminController.updatepasswordcreate)
 app.post('/admin/editpassword',admin_auth,AdminController.editpassword)
 app.get('/admin/updatephoto',admin_auth,AdminController.updatephotocreate)
 app.post('/admin/editphoto',admin_auth,AdminController.editphoto)
+app.get('/admin/app/approve/:id',admin_auth,AdminController.applicationApprove)
+app.get('/admin/app/reject/:id',admin_auth,AdminController.applicationReject)
 
 
 

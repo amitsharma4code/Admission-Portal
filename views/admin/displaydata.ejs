@@ -374,6 +374,13 @@
                     <div class="col-md-9">
                         <div class="dash-right">
                             <h1 class="text-center my-5">Student Data Display</h1>
+                            <span style="margin-bottom: 10px">
+                                <% if(message.length> 0){ %>
+                                <div class="alert alert-success"><%= message %></div>
+                                <%}%> <% if(message1.length> 0){ %>
+                                <div class="alert alert-danger"><%= message1 %></div>
+                                <%}%>
+                              </span>
                             <div class="table-responsive">
                             <table class="table">
                                 <thead>
@@ -406,7 +413,11 @@
                                             <td><%=data.college%></td>
                                             <td><%=data.course%></td>
                                             <td><%=data.branch%></td>
-                                            <td></td>
+                                            <td><a href="/admin/app/approve/<%=data._id%>" class="text-decoration-none btn btn-success">Approve</a>
+                                             <br><a  href="/admin/app/reject/<%=data._id%>" class=" text-decoraton-none btn btn-warning mt-2">Reject</a>
+                                            </td>
+                                            
+
                                         </tr>
                                    <% })%>
                                 </tbody>

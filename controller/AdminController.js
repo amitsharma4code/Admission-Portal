@@ -23,7 +23,7 @@ class AdminController{
   static displaydata=async(req,res)=>{
     const {name,image}=req.user;
     const data=await CourseModel.find()
-    res.render('admin/displaydata',{n:name,img:image,data:data});
+    res.render('admin/displaydata',{n:name,img:image,data:data,message:req.flash("success"),message1:req.flash("error")});
   }
   static displaycontact=async(req,res)=>{
     try {
@@ -104,8 +104,25 @@ class AdminController{
     req.flash("success","Photo Updated Successfully");
     res.redirect('/admin/updatephoto');
   }
-
-
-
+ static applicationApprove=async(req,res)=>{
+   const data= await CourseModel.findByIdAndUpdate(req.params.id,{
+    status:"Approved",
+    comment:"Please visit your selected college with document"
+   })
+   await data.save();
+  //  console.log(data);
+   req.flash("success","Status Approved");
+   res.redirect('/admin/displaydata');
+ }
+ static applicationReject=async(req,res)=>{
+  const data= await CourseModel.findByIdAndUpdate(req.params.id,{
+   status:"Reject",
+   comment:"Your are rejected by Admin"
+  })
+  await data.save();
+ //  console.log(data);
+  req.flash("error","Rejected Done");
+  res.redirect('/admin/displaydata');
+}
 }
 module.exports=AdminController;

@@ -22,13 +22,11 @@
                 <td><%=cdata.college%></td>
                 <td><%=cdata.course%></td>
                 <td><%=cdata.branch%></td>
-                <td>pending</td>
-                <td>Wait</td>
+                <td><%=cdata.status%></td>
+                <td><%=cdata.comment%></td>
                 <td>
-                    <a href="/btechformview" class="btn btn-danger btn-sm action-btn"><i
-                            class="fa-solid fa-eye"></i></a>
-                    <a href="/btechformedit" class="btn btn-info btn-sm action-btn"><i
-                            class="fa-regular fa-pen-to-square"></i></a>
+                    <a href="/btechformview" class="btn btn-warning btn-sm action-btn">view</a>
+                    <a href="/btechformedit" class="btn btn-info btn-sm action-btn"> Edit</a>
                 </td>
             </tr>
         </tbody>

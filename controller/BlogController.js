@@ -336,7 +336,7 @@ class BlogController {
     }
   };
 
-  static bcaformupdate = async (req, res) => {
+  static mbaformupdate = async (req, res) => {
     // console.log(req.params.id)
     try {
       const {

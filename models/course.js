@@ -38,6 +38,14 @@ const CourseSchema=new mongoose.Schema({
         type:String,
         require:true
     },
+    status:{
+        type:String,
+        default:"Pending"
+    },
+    comment:{
+        type:String,
+        default:'Wating'
+    },
     user_id:{
         type:String,
         require:true
